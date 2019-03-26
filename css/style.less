@@ -1,0 +1,181 @@
+/* fonts */
+
+.arial-reg {
+	font-family: 'Arial',san-serif;
+	src: url('ArialMT.eot');
+	src: local('Arial'), local('ArialMT'),
+		url('ArialMT.eot?#iefix') format('embedded-opentype'),
+		url('ArialMT.woff') format('woff'),
+		url('ArialMT.ttf') format('truetype');
+	font-weight: normal;
+	font-style: normal;
+}
+
+.arial-bold {
+	font-family: 'Arial', san-serif;
+	src: url('Arial-BoldMT.eot');
+	src: local('Arial Bold'), local('Arial-BoldMT'),
+		url('Arial-BoldMT.eot?#iefix') format('embedded-opentype'),
+		url('Arial-BoldMT.woff') format('woff'),
+		url('Arial-BoldMT.ttf') format('truetype');
+	font-weight: bold;
+	font-style: normal;
+}
+
+.tahoma-reg {
+	font-family: 'Tahoma', san-serif;
+	src: url('Tahoma.eot');
+	src: local('Tahoma'),
+		url('Tahoma.eot?#iefix') format('embedded-opentype'),
+		url('Tahoma.woff') format('woff'),
+		url('Tahoma.ttf') format('truetype');
+	font-weight: normal;
+	font-style: normal;
+}
+
+/* colors */
+@base: #e9eff4;
+@white: #ffffff;
+@base-text: #000000;
+@green-text: #1ea01e;
+@form: #fff4b3;
+@blue: #5c37ef;
+@blue-mix: #f7f8fa;
+@grey: #a8a8a8;
+
+/* base settings */
+body{
+	/* overflow-x: hidden; */
+	.arial-reg;
+	font-size: 14px;
+	color: @base-text;
+	background-color: @base;
+	margin-left: 83px;
+	margin-right: 83px;
+	padding-left: 100px;
+	padding-right: 100px;
+	header{
+		padding-top: 20px;
+		padding-bottom: 20px;
+		img{
+			width: 130px;
+			height: 25px;
+			text-align: left;
+		}
+	}
+	#main{
+		
+		.main-back{
+			background-image: url(../img/main-bg.png);
+			-webkit-border-radius: 10px;
+			-moz-border-radius: 10px;
+			-ms-border-radius: 10px;
+			-o-border-radius: 10px;
+			border-radius: 10px;
+			background-color: @white;
+			background-repeat: no-repeat;
+			position: absolute;
+			width: 1000px;
+			height: 100vh;
+			z-index: 100;
+			h2{
+				.arial-reg;
+				font-size: 30px;
+				color: @white;
+				padding-top: 55px;
+				padding-bottom: 30px;
+			}
+			h1{
+				.arial-bold;
+				font-size: 50px;
+				color:@white;
+			}
+			&-fransh{
+				padding-left: 0;
+				padding-right: 0;
+				.beboss-give{
+					background-color: @white;
+						padding-top: 40px;
+						padding-bottom: 40px;
+						ul{
+							padding-left: 90px;
+						li {list-style-position: inside;}
+						p{
+							.arial-reg;
+							font-size: 16px;
+							color:@base-text;
+						}
+							.arial-reg;
+							font-size: 16px;
+							color:@base-text;
+						span{
+							color: @grey;
+						}
+					}
+				}
+			}
+			.why-need{
+				-webkit-border-radius: 5px;
+				-moz-border-radius: 5px;
+				-ms-border-radius: 5px;
+				-o-border-radius: 5px;
+				border-radius: 5px;
+				background-color: @blue-mix;
+				padding-top: 34px;
+				padding-bottom: 34px;
+				a{
+					color: @blue;
+				}
+				p{
+					.arial-reg;
+					font-size: 16px;
+					color: @base-text;
+				}
+				h3{
+					.arial-reg;
+					font-size: 24px;
+					color: @base-text;
+				}
+			}
+			.rules{
+				
+				&-left{
+					padding:40px 0px 40px 0px;
+					ul{
+						li{
+							margin-bottom: 15px;
+						}
+						h3{
+							.arial-reg;
+							font-size: 24px;
+							padding-bottom: 30px;
+							margin: 0;
+						}
+					}
+				}
+				&-right{
+					padding:40px 0px 40px 20px;
+					h3{
+						.arial-reg;
+						font-size: 24px;
+						padding-bottom: 30px;
+						margin: 0;
+					}
+					h1{
+						.arial-bold;
+						font-size: 40px;
+						color: @green-text;
+						margin-top: 0;
+					}
+					p{
+						.arial-reg;
+						font-size: 16px;
+						color: @base-text;
+					}
+				}
+			}
+		}
+	}
+}
+
+

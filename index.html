@@ -24,55 +24,110 @@
 			</div>
 		</header>
 
+
 		<section id="main">
 			<div class="container">
-				<div class="row main-back">
-					<div class="col-lg-12 text-center main-back-fransh">
+				<!-- фон-фрашиза -->
+				<div class="row main-up">
+					<div class="col-lg-12 text-center">
 						<h2>Поставь ссылку на БИБОСС</h2>
 						<h1>Заработай баллы!</h1>
 						<img src="img/franshiza.png" alt="mac">
-						<div class="col-lg-12 beboss-give text-left">
-							<ul>
-								<p>БИБОСС даёт возможность получить бесплатные баллы – нужно лишь разместить на сайте компании <br> любую из ссылок:</p>
-								<li>Текстовая ссылка «Франшиза <span>[Название]</span> на БИБОСС»</li>
-								<li>Текстовая ссылка «Наша франшиза на БИБОСС»</li>
-								<li>Кнопка “Нравится франшиза” + счетчик популярности</li>
-							</ul>
-							<div class="col-lg-10 col-lg-offset-1 text-center why-need">
-								<p>Зачем нужны <a href="ya.ru">баллы</a>?</p>
-								<h3>Больше баллов — выше позиция в выдаче категории</h3>
+					</div>
+				</div>
+				<!-- список -->
+				<div class="row beboss-give">
+					<div class="col-lg-12  text-left">
+						<ul>
+							<p>БИБОСС даёт возможность получить бесплатные баллы – нужно лишь разместить на сайте компании <br> любую из ссылок:</p>
+							<li>Текстовая ссылка «Франшиза <span>[Название]</span> на БИБОСС»</li>
+							<li>Текстовая ссылка «Наша франшиза на БИБОСС»</li>
+							<li>Кнопка “Нравится франшиза” + счетчик популярности</li>
+						</ul>
+					</div>	
+				</div>
+				<!-- зачем нужны баллы -->
+				<div class="row">
+					<div class="col-lg-10 col-lg-offset-1 text-center why-need">
+						<p>Зачем нужны <a href="ya.ru">баллы</a>?</p>
+						<h3>Больше баллов — выше позиция в выдаче категории</h3>
+					</div>
+				</div>
+				<!-- правила размещения ссылки -->
+				<div class="row rules">
+					<div class="col-lg-6 text-left rules-left">
+						<ul>
+							<h3>Правила размещения ссылки</h3>
+							<li>Ссылка должна быть индексируемой (без тегов &lt;noindex&gt; и &lt;nofollow&gt;)</li>
+							<li>Ссылка должна быть читаемой, не скрытой от глаз посетителя сайта,</li>
+							<li>Ссылка должна быть размещена на странице сайта, посвящённой франчайзингу,</li>
+							<li>При размещении ссылок на другие порталы о франчайзинге – баллы обнуляются.</li>
+						</ul>
+					</div>
+					
+					<div class="col-lg-6 text-left rules-right">
+						<h3>Стоимость ссылки</h3>
+						<h1>200 баллов</h1>
+						<p>ТиЦ Вашего сайта от 10</p>
+						<br>
+						<h1>50 баллов</h1>
+						<p>ТиЦ Вашего сайта от 0 до 10</p>
+					</div>					
+				</div>
+				<div class="row">
+					<div class="col-lg-10 col-lg-offset-1 forma">
+						<p>Получить ссылку</p> <br>
+						<form class="forma-contact" method="POST" name="contact-form" action="mail.php">
+							<div class="field">
+							 	<label for="title">Ваше имя</label>	
+							 	<input required id="userName" name="userName" type="text" placeholder="Представьтесь, пожалуйста" name="">
+							 </div>
+							<div class="field">
+							 	<label for="title">Номер телефона</label>
+							 	<input required value="" oninvalid="this.setCustomValidity('Укажите правильный телефон')" oninput="setCustomValidity('')" id="phone" name="phone" type="tel" minlength="11" placeholder="Для начисления баллов и связи с Вами">
+							 </div>
+							<div class="field">
+								<label for="title">Название франшизы</label>
+								<input required onkeyup="check();" id="franshiza" name="franshiza" type="text" placeholder="Например, Subway"  name="">
 							</div>
-							
-							<div class="rules">
-								<div class="col-lg-6 text-left rules-left">
-									<ul>
-										<h3>Правила размещения ссылки</h3>
-										<li>Ссылка должна быть индексируемой (без тегов &lt;noindex&gt; и &lt;nofollow&gt;)</li>
-										<li>Ссылка должна быть читаемой, не скрытой от глаз посетителя сайта,</li>
-										<li>Ссылка должна быть размещена на странице сайта, посвящённой франчайзингу,</li>
-										<li>При размещении ссылок на другие порталы о франчайзинге – баллы обнуляются.</li>
-									</ul>
-								</div>
-								
-								<div class="col-lg-6 text-left rules-right">
-									<h3>Стоимость ссылки</h3>
-									<h1>200 баллов</h1>
-									<p>ТиЦ Вашего сайта от 10</p>
-									<br>
-									<h1>50 баллов</h1>
-									<p>ТиЦ Вашего сайта от 0 до 10</p>
-								</div>
-							</div>			
-						</div>
+						
+							<button  id="button" class="main-form-btn" type="submit">Получить ссылку</button>
+						</form>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-lg-10 col-lg-offset-1 not-yet">
+						<p><span>Это еще не все...</span> Вы можете заработать дополнительные баллы, если разместите на своём сайте новость, интервью или статью БИБОСС о Вашей компании с активной ссылкой! 50 баллов за активную ссылку на новость!
+						</p>
 					</div>
 				</div>
 			</div>
 		</section>
-		
+		<footer>
+			<div class="container">
+				<div class="row">
+					<div class="col-lg-12">
+						<div class="main-down">
+						<img class="foot-img" src="img/footer-bg.png" alt="лого">
+						</div>
+					</div>
+				</div>
+			</div>
+		</footer>
+	
 		
 		 <!-- jQuery (necessary for Bootstrap's JavaScript plugins) --> 
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script> 
 		<!-- Include all compiled plugins (below), or include individual files as needed --> 
+		<script>
+		function check() {
+		if ($('#franshiza').val() != '')
+		$('#button').removeAttr('disabled');
+		else
+		$('#button').attr('disabled','disable');
+		}
+		</script>
+
 		<script src="js/bootstrap.min.js"></script> 
 	</body> 
 </html>
